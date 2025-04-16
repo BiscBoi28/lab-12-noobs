@@ -51,15 +51,20 @@ document.getElementById("search").addEventListener("input", async (e) => {
 
 loadUsers();
 
-document.getElementById("userForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const username = document.getElementById("username").value;
-  const bio = document.getElementById("bio").value;
-  await fetch(`/users`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ username, bio })
-  });
-  e.target.reset();
-  loadUsers();
-});
+const userForm = document.getElementById('userForm');
+if (userForm) {
+    userForm.addEventListener('submit', async (event) => {
+        event.preventDefault(); // Prevent default form submission
+        const username = document.getElementById("username").value;
+        const bio = document.getElementById("bio").value;
+        await fetch(`/users`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ username, bio })
+        });
+        event.target.reset();
+        loadUsers();
+    });
+} else {
+    console.error("User form not found!");
+}

@@ -34,35 +34,35 @@
 
 ### Table to keep track
 
-| ID  | Issue Description                                                                            | Identified By | Fixed By   |
-|-----|----------------------------------------------------------------------------------------------|---------------|------------|
-| 1   | Style.css is not filled                                                                      | Narain        | Whole Team |
-| 2   | models items is not inheriting Baseodel                                                      | Aryan         | Aryan      |
-| 3   | Items was importing model and other files not in folder                                      | Aryan         | Aryan      |
-| 4   | users.py the get and pull request defined wrong so leading to 405                            | Aryan         | Aryan      |
-| 5   | There's a mismatch between the HTML element ID and what's being referenced in the JavaScript code | Aryan         | Aryan      |
-| 6   | Added listner in news.js for the search functionality to work                                | Aryan         | Aryan      |
-| 7   | const baseURL = "http://localhost:8000"; in profile.js                              | Ayush         | Ayush      |
-| 8   | const res = await fetch(${baseURL}/users); fixed in profile.js     | Ayush         | Ayush      |
-| 9   |  models.py, has names as string, not integer                        | Ayush         | Ayush      |
-| 10  |  analytics.py was trying to access names, but the correct is name                       | Ayush         | Ayush      |
-| 11  |   analytics.py was trying to access usernames, but the correct is username                                      | Ayush         | Ayush      |
-| 12  |   items.js had post instead of  delete method when trying o delete the data      | Ayush         | Ayush      |
-| 13  |                                                                                              |               |            |
-| 14  |                                                                                              |               |            |
-| 15  |                                                                                              |               |            |
-| 16  |                                                                                              |               |            |
-| 17  |                                                                                              |               |            |
-| 18  |                                                                                              |               |            |
-| 19  |                                                                                              |               |            |
-| 20  |                                                                                              |               |            |
-| 21  |                                                                                              |               |            |
-| 22  |                                                                                              |               |            |
-| 23  |                                                                                              |               |            |
-| 24  |                                                                                              |               |            |
-| 25  |                                                                                              |               |            |
-| 26  |                                                                                              |               |            |
-| 27  |                                                                                              |               |            |
-| 28  |                                                                                              |               |            |
-| 29  |                                                                                              |               |            |
-| 30  |                                                                                              |               |            |
+| ID  | Issue Description                                                                            | Identified By | Fixed By |
+|-----|----------------------------------------------------------------------------------------------|---------------|----------|
+| 1   | Style.css is not filled                                                                      | Narain        | Pranav   |
+| 2   | models items is not inheriting Baseodel                                                      | Aryan         | Aryan    |
+| 3   | Items was importing model and other files not in folder                                      | Aryan         | Aryan    |
+| 4   | users.py the get and pull request defined wrong so leading to 405                            | Aryan         | Aryan    |
+| 5   | There's a mismatch between the HTML element ID and what's being referenced in the JavaScript code | Aryan         | Aryan    |
+| 6   | Added listner in news.js for the search functionality to work                                | Aryan         | Aryan    |
+| 7   | const baseURL = "http://localhost:8000"; in profile.js                              | Ayush         | Ayush    |
+| 8   | const res = await fetch(${baseURL}/users); fixed in profile.js     | Ayush         | Ayush    |
+| 9   |  models.py, has names as string, not integer                        | Ayush         | Ayush    |
+| 10  |  analytics.py was trying to access names, but the correct is name                       | Ayush         | Ayush    |
+| 11  |   analytics.py was trying to access usernames, but the correct is username                                      | Ayush         | Ayush    |
+| 12  |   items.js had post instead of  delete method when trying o delete the data      | Ayush         | Ayush    |
+| 13  |    In profile.html, corrected the file path from styles/profile.html to to scripts/profile.html         | Pranav        | Pranav   |
+| 14  |  In items.js, in the headers part, changed the content type from application/html to application/json.                   | Pranav        | Pranav   |
+| 15  |   Changed port from 8001 to 8000 in analytics.json                                              | Pranav        | Pranav   |
+| 16  |                                                                                              |               |          |
+| 17  |                                                                                              |               |          |
+| 18  |                                                                                              |               |          |
+| 19  |                                                                                              |               |          |
+| 20  |                                                                                              |               |          |
+| 21  |                                                                                              |               |          |
+| 22  |                                                                                              |               |          |
+| 23  |                                                                                              |               |          |
+| 24  |                                                                                              |               |          |
+| 25  |                                                                                              |               |          |
+| 26  |                                                                                              |               |          |
+| 27  |                                                                                              |               |          |
+| 28  |                                                                                              |               |          |
+| 29  |                                                                                              |               |          |
+| 30  |                                                                                              |               |          |

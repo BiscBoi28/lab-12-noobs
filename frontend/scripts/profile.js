@@ -1,6 +1,7 @@
+const baseURL = "http://localhost:8000";
 
 async function loadUsers() {
-  const res = await fetch(`/users`);
+  const res = await fetch(`${baseURL}/users`);
   const users = await res.json();
   const list = document.getElementById("userList");
   list.innerHTML = "";
@@ -57,7 +58,7 @@ if (userForm) {
         event.preventDefault(); // Prevent default form submission
         const username = document.getElementById("username").value;
         const bio = document.getElementById("bio").value;
-        await fetch(`/users`, {
+        await fetch(`/users/create`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ username, bio })

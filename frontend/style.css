@@ -1,2 +1,160 @@
-/* Aah I was too lazy to implement this
-You can do it */
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+/* Container layout */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation styles */
+nav {
+    background-color: #333;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+/* Typography */
+h1 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+/* Form elements */
+input, select, button {
+    padding: 8px 12px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+li {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Utility classes */
+.hidden {
+    display: none;
+}
+
+.error {
+    color: #dc3545;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-left: 3px solid #dc3545;
+}
+
+/* Search inputs */
+#search {
+    width: 100%;
+    max-width: 400px;
+    margin: 1rem 0;
+}
+
+/* Stats and analytics */
+#stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+/* Quiz specific */
+#question {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+
+#feedback {
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+/* News feed */
+#newsList article {
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Loading state */
+#loading {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    nav a {
+        margin: 0.2rem 0;
+        text-align: center;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+}

@@ -55,10 +55,10 @@
 | 17  | user.py add delete in try catch block and instead of delete all make it delete one           | Aryan         | Aryan    |
 | 18  | Add base url in profile.js                                                                   | Aditya        | Aditya   |
 | 19  | "plot": f"data:image/png;base64,{image_base64}" added in analytics.py jsonresponse           | Aditya        | Aditya   |
-| 20  |                                                                                              |               |          |
-| 21  |                                                                                              |               |          |
-| 22  |                                                                                              |               |          |
-| 23  |                                                                                              |               |          |
+| 20  |  Added an asked_questions list to track which questions have been asked    | Aditya        | Aditya   |
+| 21  |  Changed the /answer from GET to POST to match request method                  | Aryan         | Aryan    |
+| 22  |  Added the /quiz prefix to the quiz router                | Pranav        | Pranav   |
+| 23  |                                                                                              |            |          |
 | 24  |                                                                                              |               |          |
 | 25  |                                                                                              |               |          |
 | 26  |                                                                                              |               |          |

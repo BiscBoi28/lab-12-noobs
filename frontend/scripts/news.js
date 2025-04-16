@@ -11,40 +11,58 @@ async function loadNews(searchTerm = "", source = "all", reset = false) {
   
   if (reset) {
     allArticles = [];
-    list.innerHTML = "";
   }
+  list.innerHTML = "";
   
   loading.style.display = "block";
   
   try {
     const selectedFeeds = source === "all" ? feeds : feeds.filter(f => f.name === source);
     
-    for (const feed of selectedFeeds) {
-      const res = await fetch(`${rssConverter}${encodeURIComponent(feed.url)}`);
-      if (!res.ok) throw new Error(`Failed to fetch ${feed.name}`);
-      const data = await res.json();
-      
-      const articles = (data.items || []).map(item => ({
-        title: item.title || "No title",
-        description: item.description || "No description",
-        url: item.link || "#",
-        source: feed.name.toUpperCase(),
-        pubDate: item.pubDate ? new Date(item.pubDate).toLocaleDateString() : "Unknown"
-      }));
-      
-      allArticles.push(...articles);
+    if (reset || allArticles.length === 0) {
+      for (const feed of selectedFeeds) {
+        const res = await fetch(`${rssConverter}${encodeURIComponent(feed.url)}`);
+        if (!res.ok) throw new Error(`Failed to fetch ${feed.name}`);
+        const data = await res.json();
+        
+        const articles = (data.items || []).map(item => ({
+          title: item.title || "No title",
+          description: item.description || "No description",
+          url: item.link || "#",
+          source: feed.name.toUpperCase(),
+          pubDate: item.pubDate ? new Date(item.pubDate).toLocaleDateString() : "Unknown"
+        }));
+        
+        // Filter out duplicates before adding to allArticles
+        const uniqueArticles = articles.filter(article => 
+          !allArticles.some(existing => 
+            existing.title === article.title || 
+            existing.url === article.url
+          )
+        );
+        
+        allArticles.push(...uniqueArticles);
+      }
     }
     
-    const filteredArticles = searchTerm
-      ? allArticles.filter(article =>
-          article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          article.description.toLowerCase().includes(searchTerm.toLowerCase())
-        )
-      : allArticles;
+    // Filter articles based on source and search term
+    let filteredArticles = allArticles;
+    
+    if (source !== "all") {
+      filteredArticles = filteredArticles.filter(article => 
+        article.source.toLowerCase() === source.toUpperCase()
+      );
+    }
+    
+    if (searchTerm) {
+      filteredArticles = filteredArticles.filter(article =>
+        article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        article.description.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
     
     document.getElementById("articleCount").textContent = `Total articles: ${filteredArticles.length}`;
-    // OPINION: Javascript syntax is stupid
-    list.innerHTML = "";
+    
     filteredArticles.forEach(article => {
       const div = document.createElement("div");
       div.className = "news-item";
@@ -56,8 +74,6 @@ async function loadNews(searchTerm = "", source = "all", reset = false) {
       `;
       list.appendChild(div);
     });
-    
-    
   } catch (err) {
     list.innerHTML += `<p style="color: red;">Error: ${err.message}</p>`;
   } finally {
@@ -65,11 +81,18 @@ async function loadNews(searchTerm = "", source = "all", reset = false) {
   }
 }
 
-
-loadNews();
-
-// Add search event listener
+// Add event listeners for search and source selection
 document.getElementById("search").addEventListener("input", async (e) => {
   const term = e.target.value;
-  await loadNews(term);
+  const source = document.getElementById("source").value;
+  await loadNews(term, source, false);
 });
+
+document.getElementById("source").addEventListener("change", async (e) => {
+  const source = e.target.value;
+  const term = document.getElementById("search").value;
+  await loadNews(term, source, true);
+});
+
+// Initial load
+loadNews("", "all", true);

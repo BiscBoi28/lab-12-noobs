@@ -38,17 +38,29 @@ questions = [
 ]
 
 game_state = {"high_score": 0}
-# god would hate me for not dockerizing this repo
+asked_questions = []
+
 @router.get("/question")
 async def get_question():
-    question = questions[1]
+    # If all questions have been asked, reset the asked_questions list
+    if len(asked_questions) == len(questions):
+        asked_questions.clear()
+    
+    # Get a random question that hasn't been asked yet
+    available_questions = [q for q in questions if q["id"] not in asked_questions]
+    if not available_questions:
+        return {"error": "No questions available"}
+    
+    question = random.choice(available_questions)
+    asked_questions.append(question["id"])
+    
     return {
         "id": question["id"],
         "text": question["text"],
         "options": question["options"]
     }
 
-@router.get("/answer")
+@router.post("/answer")
 async def submit_answer(data: dict):
     question_id = data.get("id")
     answer = data.get("answer")

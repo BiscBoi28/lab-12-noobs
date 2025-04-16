@@ -54,8 +54,13 @@ async function loadQuestion() {
   try {
     const res = await fetch(`${BASE_URL}/quiz/question`);
     const data = await res.json();
+    
+    if (data.error) {
+      feedback.textContent = data.error;
+      return;
+    }
+    
     currentQuestion = data;
-
     questionDiv.textContent = data.text;
 
     form.innerHTML = data.options.map(option => `

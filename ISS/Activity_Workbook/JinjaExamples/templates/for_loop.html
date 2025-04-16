@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>For Loop Example</title></head>
+<body>
+    <h1>For Loop in Jinja</h1>
+
+    <ul>
+        {% for item in items %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+    <p>Total Items: {{ items|length }}</p>
+</body>
+</html>

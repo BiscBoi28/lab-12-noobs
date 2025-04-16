@@ -30,6 +30,38 @@
 
 ### Table to keep track
 
+| ID  | Issue Description                                       | Identified By | Fixed By   |
+|-----|---------------------------------------------------------|---------------|------------|
+| 1   | Style.css is not filled                                 | Narain        | Whole Team |
+| 2   | models items is not inheriting Baseodel                 | Aryan         | Aryan      |
+| 3   | Items was importing model and other files not in folder | Aryan         | Aryan      |
+| 4   |                                                         |               |            |
+| 5   |                                                         |               |            |
+| 6   |                                                         |               |            |
+| 7   |                                                         |               |            |
+| 8   |                                                         |               |            |
+| 9   |                                                         |               |            |
+| 10  |                                                         |               |            |
+| 11  |                                                         |               |            |
+| 12  |                                                         |               |            |
+| 13  |                                                         |               |            |
+| 14  |                                                         |               |            |
+| 15  |                                                         |               |            |
+| 16  |                                                         |               |            |
+| 17  |                                                         |               |            |
+| 18  |                                                         |               |            |
+| 19  |                                                         |               |            |
+| 20  |                                                         |               |            |
+| 21  |                                                         |               |            |
+| 22  |                                                         |               |            |
+| 23  |                                                         |               |            |
+| 24  |                                                         |               |            |
+| 25  |                                                         |               |            |
+| 26  |                                                         |               |            |
+| 27  |                                                         |               |            |
+| 28  |                                                         |               |            |
+| 29  |                                                         |               |            |
+| 30  |                                                         |               |            |
 | ID  | Issue Description                        | Identified By | Fixed By     |
 |-----|------------------------------------------|---------------|--------------|
 | 1   | Style.css is not filled                                    |         Narain |     Whole Team     |

@@ -37,7 +37,7 @@ document.getElementById("search").addEventListener("input", async (e) => {
   filteredUsers.forEach(user => {
     const li = document.createElement("li");
     li.textContent = `${user.username}: ${user.bio}`;
-
+  
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete";
     deleteBtn.onclick = async () => {

@@ -39,7 +39,7 @@
 | 1   | Style.css is not filled                                                                               | Narain        | Pranav   |
 | 2   | models items is not inheriting Baseodel                                                               | Aryan         | Aryan    |
 | 3   | Items was importing model and other files not in folder so refractor                                  | Aryan         | Aryan    |
-| 4   | users.py the get and pull request defined wrong so leading to 405                                     | Aryan         | Aryan    |
+| 4   | users.py the get_users should be get                                                                  | Aryan         | Aryan    |
 | 5   | There's a mismatch between the HTML element ID and what's being referenced in the JavaScript code     | Aryan         | Aryan    |
 | 6   | Added listner in news.js for the search functionality to work                                         | Aryan         | Aryan    |
 | 7   | const baseURL = "http://localhost:8000"; in profile.js                                                | Ayush         | Ayush    |
@@ -52,8 +52,8 @@
 | 14  | In items.js, in the headers part, changed the content type from application/html to application/json. | Pranav        | Pranav   |
 | 15  | Changed port from 8001 to 8000 in analytics.json                                                      | Pranav        | Pranav   |
 | 16  | full nav bars were missing in all files                                                               | Aditya        | Aditya   |
-| 17  |                                                                                                       |               |          |
-| 18  |                                                                                                       |               |          |
+| 17  | user.py add delete in try catch block and instead of delete all make it delete one                    | Aryan         | Aryan    |
+| 18  | Add base url in profile.js                                                                            | Aryan         | Aryan    |
 | 19  |                                                                                                       |               |          |
 | 20  |                                                                                                       |               |          |
 | 21  |                                                                                                       |               |          |

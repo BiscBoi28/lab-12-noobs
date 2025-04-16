@@ -47,8 +47,8 @@
 | 13  |                                          |               |              |
 | 14  |                                          |               |              |
 | 15  |                                          |               |              |
-| 16  |                                          |               |              |
-| 17  |                                          |               |              |
+| 16  | In profile.html (line 29), the script path for profile.js is not styles/profile.js, it should have been scripts/profile.js                                         | Pranav              | Pranav         |
+| 17  | In items.js (line 41) headers part the content type given is application/html, while it should have been application/json                                         | Pranav              | Pranav             |
 | 18  |                                          |               |              |
 | 19  |                                          |               |              |
 | 20  |                                          |               |              |

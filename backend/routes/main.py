@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from routes.items import router as items_router
-from routes.analytics import router as analytics_router
-from routes.quiz import router as quiz_router
+from items import router as items_router
+from analytics import router as analytics_router
+from quiz import router as quiz_router
 
 app = FastAPI()
 

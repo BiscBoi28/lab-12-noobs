@@ -35,8 +35,8 @@
 | 1   | Style.css is not filled                                 | Narain        | Whole Team |
 | 2   | models items is not inheriting Baseodel                 | Aryan         | Aryan      |
 | 3   | Items was importing model and other files not in folder | Aryan         | Aryan      |
-| 4   |                                                         |               |            |
-| 5   |                                                         |               |            |
+| 4   |  users.py the get and pull request defined wrong so leading to 405     | Aryan         | Aryan      |
+| 5   | There's a mismatch between the HTML element ID and what's being referenced in the JavaScript code | Aryan         | Aryan      |
 | 6   |                                                         |               |            |
 | 7   |                                                         |               |            |
 | 8   |                                                         |               |            |

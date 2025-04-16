@@ -57,6 +57,7 @@ async function loadNews(searchTerm = "", source = "all", reset = false) {
       list.appendChild(div);
     });
     
+    
   } catch (err) {
     list.innerHTML += `<p style="color: red;">Error: ${err.message}</p>`;
   } finally {
@@ -66,3 +67,9 @@ async function loadNews(searchTerm = "", source = "all", reset = false) {
 
 
 loadNews();
+
+// Add search event listener
+document.getElementById("search").addEventListener("input", async (e) => {
+  const term = e.target.value;
+  await loadNews(term);
+});

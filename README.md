@@ -53,7 +53,7 @@
 | 15  | Changed port from 8001 to 8000 in analytics.json                                                      | Pranav        | Pranav   |
 | 16  | full nav bars were missing in all files                                                               | Aditya        | Aditya   |
 | 17  | user.py add delete in try catch block and instead of delete all make it delete one                    | Aryan         | Aryan    |
-| 18  | Add base url in profile.js                                                                            | Aryan         | Aryan    |
+| 18  | Add base url in profile.js                                                                            | Aditya        | Aditya   |
 | 19  |                                                                                                       |               |          |
 | 20  |                                                                                                       |               |          |
 | 21  |                                                                                                       |               |          |

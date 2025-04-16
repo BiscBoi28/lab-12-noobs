@@ -1,5 +1,4 @@
 const baseURL = "http://localhost:8000";
-
 async function loadUsers() {
   const res = await fetch(`${baseURL}/users`);
   const users = await res.json();
@@ -41,7 +40,7 @@ document.getElementById("search").addEventListener("input", async (e) => {
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete";
     deleteBtn.onclick = async () => {
-      await fetch(`/users/${user._id}`, { method: "PATCH" });
+      await fetch(`${baseURL}/users/${user._id}`, { method: "DELETE" });
       loadUsers();
     };
 
@@ -58,7 +57,7 @@ if (userForm) {
         event.preventDefault(); // Prevent default form submission
         const username = document.getElementById("username").value;
         const bio = document.getElementById("bio").value;
-        await fetch(`/users/create`, {
+        await fetch(`${baseURL}/users`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ username, bio })
